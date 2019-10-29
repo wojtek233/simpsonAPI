@@ -1,18 +1,15 @@
 import React from 'react';
 import './QuoteCard.css';
 
-function QuoteCard(){
+function QuoteCard(props){
   return(
   <div>
     <figure className="QuoteCard">
-      <img src="https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FNelsonMuntz.png?1497567511185"
-      alt="Nelson Muntz"></img>
+      <img src={props.quote.image} alt={props.quote.character} />
     <figcaption>
-      <blockquote>
-      Shoplifting is a victimless crime, like punching someone in the dark.
-      </blockquote>
-      <cite>Nelson Muntz</cite>
-    </figcaption>
+      <blockquote>{props.quote.quote}</blockquote>
+      <cite>{props.quote.character}</cite>
+    </figcaption> 
     </figure>
   </div>)
 }
